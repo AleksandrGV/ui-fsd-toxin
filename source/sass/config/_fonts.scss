@@ -1,0 +1,13 @@
+// Шрифты
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src:
+    url("../fonts/montserratregular.woff2") format("woff2"),
+    url("../fonts/montserratregular.woff") format("woff"),
+    url("../fonts/montserratregular.svg") format("svg"),
+    url("../fonts/montserratregular.ttf") format("ttf");
+}
