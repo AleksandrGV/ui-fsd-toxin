@@ -117,7 +117,7 @@ const clean = () => {
 
 const copy = () => {
   return src([
-    "source/fonts/**/*.{woff,woff2}",
+    "source/fonts/**/*.{woff,woff2,ttf,svg}",
     "source/img/**/!(icon-*)",
     "source/js/**",
     "source/*.ico"
@@ -130,11 +130,9 @@ const copy = () => {
 
 exports.htmlMin = htmlMin;
 exports.styles = styles;
-// exports.minjs = minjs;
 exports.images = images;
 exports.webp = createWebp;
-// exports.sprite = sprite;
-// exports.clean = clean;
+
 
 // Public
 

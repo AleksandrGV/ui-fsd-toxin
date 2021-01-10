@@ -11,3 +11,15 @@
     url("../fonts/montserratregular.svg") format("svg"),
     url("../fonts/montserratregular.ttf") format("ttf");
 }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/montserratbold.woff2") format("woff2"),
+    url("../fonts/montserratbold.woff") format("woff"),
+    url("../fonts/montserratbold.svg") format("svg"),
+    url("../fonts/montserratbold.ttf") format("ttf");
+}
