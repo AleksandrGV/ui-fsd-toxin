@@ -8,35 +8,44 @@ include ../layout/main-template
 
   main.page__main
 
-    include ../includes/ui-colors-type
+    //- include ../includes/ui-colors-type
 
-      hr
+    //-   hr
 
     include ../includes/form-elements
+    .container
+      .wrap
+        .room-details
+          .room-details__comfort
+            h4.title.room-details__title Комфорт
+            p.room-details__text Шумопоглощающие стены
+          .room-details__convenience
+            h4.title.room-details__title Удобство
+            p.room-details__text Окно в каждой из спален
 
-    include ../mixin/buttons
+        .comments
+          article.comments__user
+            img.comments__avatar(src="../img/user_avatar.png" alt="Фотография пользователя")
+            h4.title.comments__title Мурад Сарафанов
+            time.comments__time(datetime="13h 05m") 5 дней назад
+            p.comments__text
+              | Великолепный матрас на кровати в
+              | основной спальне! А пуфик вообще потрясающий.
+              | И стены, действительно, шумоподавляющие.
+              | Выкрикивал комплименты повару — никто не
+              | жаловался из соседей
+            button.like__button.like__button--pressed.comments__button-like(type='button') 12
+              span.visually-hidden Кнопка нажата
 
-    .room-details
-      .room-details__comfort
-        h4.room-details__title Комфорт
-        p.room-details__text Шумопоглощающие стены
-      .room-details__convenience
-        h4.room-datails__title Удобство
-        p.room-details__text Окно в каждой из спален
+    hr
+    .background
+      .container
+        .container-cards
+          include ../includes/cards
 
-    .comments
-      article.comments__user
-        h4.comments__title Мурад Сарафанов
-        time.comments__time(datetime="13h 05m") 5 дней назад
-        p.cooments__text Великолепный матрас на кровати в
-        | основной спальне! А пуфик вообще потрясающий.
-        | И стены, действительно, шумоподавляющие.
-        | Выкрикивал комплименты повару — никто не
-        | жаловался из соседей
-        button.comments__button
-          svg.comments__heart(width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M4.90292 7.88672L4.29745 7.33984C3.60735 6.71484 3.10605 6.2526 2.79355 5.95312C2.48105 5.65365 2.12948 5.28255 1.73886 4.83984C1.36125 4.39714 1.10084 4 0.957608 3.64844C0.814379 3.28385 0.742764 2.91276 0.742764 2.53516C0.742764 1.89714 0.957608 1.35677 1.3873 0.914062C1.83 0.471354 2.37688 0.25 3.02792 0.25C3.78313 0.25 4.40813 0.542969 4.90292 1.12891C5.39771 0.542969 6.02271 0.25 6.77792 0.25C7.42896 0.25 7.96933 0.471354 8.39901 0.914062C8.84172 1.35677 9.06308 1.89714 9.06308 2.53516C9.06308 3.04297 8.89381 3.57031 8.55526 4.11719C8.21672 4.66406 7.84563 5.13932 7.44198 5.54297C7.05136 5.94661 6.40683 6.55208 5.50839 7.35938L4.90292 7.88672Z" fill="#BC9CFF")
-          span.comments__number 12
+          .cards-wrap
+            include ../includes/calendar
+            include ../includes/slider
 
   include ../includes/footer
 

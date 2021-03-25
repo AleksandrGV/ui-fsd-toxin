@@ -38,6 +38,30 @@ img {
   max-width: 1300px;
   margin: 0 auto;
   min-height: 100%;
+}
+
+.ui-kit {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 0 21px;
+}
+
+.inner {
+  max-width: 266px;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  margin: 0 30px;
+}
+
+.list {
+  @include list-reset;
+}
+
+.background {
+  background-color: $light-gray;
+  z-index: 0;
 }

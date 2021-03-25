@@ -1,0 +1,120 @@
+.calendar {
+  width: 320px;
+  border: 1px solid $gainsborough;
+  padding: 2px 20px 0;
+  box-shadow: 0px 0px 25px 0px $light-telegrey;
+  background-color: $white;
+  margin: 20px 20px 40px;
+}
+
+.calendar__table {
+  width: 100%;
+  line-height: 3;
+  border-collapse: collapse;
+}
+
+.calendar__header {
+  position: relative;
+  font-size: 19px;
+  color: $cobalt-blue;
+  border-bottom: 12px solid transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/arrow_forward.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    transform: rotate(180deg) translateY(45%);
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.calendar__header-day {
+  color: $purple;
+}
+
+.calendar__number-day {
+  font-size: 12px;
+  text-align: center;
+  line-height: 38px;
+  z-index: 5;
+  &--active,
+  &--start,
+  &--end {
+    width: 43px;
+    height: 40px;
+    color: $white;
+    border-radius: 50%;
+
+    .calendar__day {
+      font-weight: 700;
+    }
+  }
+  &--active {
+    background-image: linear-gradient(180deg, $green 0%, $turquoise-blue-craiola 100%);
+  }
+
+  &--start,
+  &--end {
+    position: relative;
+    background: linear-gradient(180deg, $purple 0%, $light-blue 100%);
+    z-index: 5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 44px;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, $purple 0%, $light-blue 100%);
+      opacity: .25;
+      z-index: -1;
+    }
+  }
+
+  &--start::before {
+    right: 0;
+  }
+
+  &--end::before {
+    left: 0;
+  }
+
+  &--intermediate {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(180deg, $purple 0%, $light-blue 100%);
+      opacity: .25;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.calendar__day {
+  font-weight: 400;
+
+  &--inactive {
+    color: $blue-crayola;
+  }
+
+}

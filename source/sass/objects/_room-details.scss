@@ -1,0 +1,53 @@
+.room-details {
+  width: 320px;
+  color: $purplish-blue;
+}
+
+.room-details__title {
+  margin-bottom: 7px;
+}
+
+.room-details__comfort {
+  margin-bottom: 48px;
+}
+
+.room-details__comfort,
+.room-details__convenience {
+  position: relative;
+  padding-left: 58px;
+  margin-right: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 0;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background-color: $pale-blue;
+  }
+}
+
+.room-details__text {
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.room-details__comfort::before {
+  background-image: url("../img/insert_emoticon.svg");
+}
+
+.room-details__convenience::before {
+  background-image: url("../img/location_city.svg");
+}

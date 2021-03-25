@@ -1,0 +1,160 @@
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  margin: 0 88px 0 8px;
+}
+.cards {
+  width: 380px;
+  border: 1px solid $gainsborough;
+  padding: 21px 30px 28px;
+  box-shadow: 0px 0px 25px 0px $light-telegrey;
+  margin: 20px 20px 39px;
+  background-color: $white;
+  z-index: 0;
+  border-radius: 4px;
+
+  .dropdown {
+    margin-bottom: 4px;
+
+  }
+
+  .dropdown__list--guest {
+  margin-bottom: 27px;
+  }
+
+  .dropdown__list--sub {
+    display: none;
+  }
+
+  .dropdown__link-span::before {
+    left: 220px;
+  }
+
+  .dropdown__link-span::after {
+    left: 277px;
+  }
+
+  .form__fieldset {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--rooms {
+    width: 270px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--input {
+    padding-top: 41px;
+    padding-left: 26px;
+  }
+
+  &--filter {
+    padding-right: 26px;
+  }
+}
+
+.cards-form .form__item {
+  margin-bottom: 9px;
+
+    &--man {
+      margin-right: 12px;
+    }
+}
+
+.cards__sign-in {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 29px;
+}
+
+.cards__title {
+  @include h2;
+  display: flex;
+  align-items: baseline;
+  text-transform: inherit;
+  margin-bottom: 17px;
+
+  &--info {
+    font-size: 19px;
+    position: relative;
+    padding-bottom: 11px;
+    margin-bottom: 9px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $blue-crayola;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &--check-in {
+    margin-bottom: 21px;
+  }
+
+  &--input {
+    margin-bottom: 19px;
+  }
+}
+
+.cards__title-mark {
+  font-size: 15px;
+  margin-right: 6px;
+
+  &--info {
+    font-size: 15px;
+  }
+}
+
+.cards__span-left {
+  color: $purple;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: auto;
+
+  &--info {
+    font-size: 12px;
+  }
+}
+
+.cards__span-right {
+  color: $manatee;
+  font-size: 14px;
+}
+
+.cards__small-right {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+// Cards slider
+
+.cards__info {
+  margin: 18px 17px 0;
+}
+
+.cards__rating-review {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2px 2px;
+}
+
+.cards__review-wrap {
+  margin-top: 4px;
+}
+
+.cards__review-number {
+  margin-right: auto;
+}
+
+.cards__review-text {
+  font-weight: 400;
+}

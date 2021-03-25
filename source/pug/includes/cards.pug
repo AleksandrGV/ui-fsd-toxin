@@ -1,0 +1,171 @@
+//- Cards
+
+.cards-wrap
+  section.cards.cards--number-selection
+    h6.visually-hidden Cards default
+      h2.cards__title Найдём номера под ваши пожелания
+      //- Прибытие
+      .dropdown-date
+            .dropdown
+              h4.dropdown__title Прибытие
+              ul.dropdown__list
+                li.dropdown__item
+                  a.dropdown__link(href="#") ДД.ММ.ГГГГ
+            .dropdown
+              h4.dropdown__title Выезд
+              ul.dropdown__list
+                li.dropdown__item
+                  a.dropdown__link(href="#") ДД.ММ.ГГГГ
+      //- Dropdown количество гостей
+      .dropdown
+        h4.dropdown__title Гости
+        ul.dropdown__list.dropdown__list--guest
+          li.dropdown__item
+            a.dropdown__link(href="#") Сколько гостей
+            ul.dropdown__list.dropdown__list--sub
+              li.dropdown__item.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Взрослые
+                  span.dropdown__link-span 0
+              li.dropdown__item.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Дети
+                  span.dropdown__link-span 0
+              li.dropdown__item.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Младенцы
+                  span.dropdown__link-span 0
+              li.dropdown__item.dropdown__item--sub
+                a(href="#").dropdown__button Применить
+
+      a(href="#").button.button--wide Подобрать номер
+        svg.button--svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
+
+  //- Регистрация
+  section.cards.cards--sign-up
+    h6.visually-hidden Форма регистрации
+    form.form.cards-form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+      h2.cards__title.cards__title--check-in Регистрация аккаунта
+      ul.form__list
+        li.form__item
+          label.form__label.visually-hidden(for="field-name") Имя:
+          input.form__input(type="text" name="name" id="field-name" placeholder="Имя" required)
+        li.form__item
+          label.form__label.visually-hidden(for="field-surname") Фамилия:
+          input.form__input(type="text" name="surname" id="field-surname" placeholder="Фамилия" required)
+
+      ul.form__list.form__list--radio
+        li.form__item.form__item--man
+          input#input-radio-man.visually-hidden.form__input-radio(type='radio' name='gender-selection' checked)
+          label.form__label-radio(for='input-radio-man') Мужчина
+        li.form__item
+          input#input-radio-woman.visually-hidden.form__input-radio(type='radio' name='gender-selection')
+          label.form__label-radio(for='input-radio-woman') Женщина
+
+      .form__masked
+        label.form__label(for='masked') Дата рождения
+        input#masked.form__input(type='text' placeholder='ДД.ММ.ГГГГ')
+
+      fieldset.form__fieldset
+        legend.form__legend Данные для входа в сервис
+        ul.form__list
+          li.form__item
+            label.form__label.visually-hidden(for='field-email') Поле для ввода email адреса
+            input#field-email.form__input(type='text' name='email' placeholder='Email')
+          li.form__item
+            label.form__label.visually-hidden(for='field-password') Поле для ввода пароля
+            input#field-password.form__input(type='password' name='password' placeholder='Пароль')
+
+        .form__toggle-wrap
+          input#input-toggle-1.visually-hidden.form__input-toggle(type='checkbox' name='toggle-checkbox-1')
+          label.form__label-toggle(for='input-toggle-1') Получать спецпредложения
+
+      a(href="#").button.button--wide Перейти к оплате
+        svg.button--svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
+
+      .cards__sign-in
+        p.cards__sign-in-text Уже есть аккаунт на Toxin
+        button(type="button").button.button--default Войти
+
+//- Cards filter
+.cards-wrap
+  section.cards.cards--filter
+    h6.visually-hidden Cards filter
+    form.cards-form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+      h2.cards__title
+        b.cards__title-mark &#8470;
+        | 888
+        span.cards__span-left люкс
+        span.cards__span-right 9 990₽
+          small.cards__small-right  в сутки
+      //- Прибытие
+      .dropdown-date
+            .dropdown
+              h4.dropdown__title Прибытие
+              ul.dropdown__list
+                li.dropdown__item
+                  a.dropdown__link(href="#") 19.08.2019
+            .dropdown
+              h4.dropdown__title Выезд
+              ul.dropdown__list
+                li.dropdown__item
+                  a.dropdown__link(href="#") 23.08.2019
+      //- Dropdown количество гостей
+      .dropdown
+        h4.dropdown__title Гости
+        ul.dropdown__list
+          li.dropdown__item
+            a.dropdown__link(href="#") 3 гостя
+            ul.dropdown__list--sub
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Взрослые
+                  span.dropdown__link--span 2
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Дети
+                  span.dropdown__link--span 1
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Младенцы
+                  span.dropdown__link--span 0
+              li.dropdown__item--button
+                a(href="#").dropdown__button Очистить
+                a(href="#").dropdown__button Применить
+
+      //- Расчет стоимости
+      dl.cost-calculation
+        .cost-calculation__item
+          dt.cost-calculation__term 9 990₽ х 4 суток
+          dd.cost-calculation__nomber 39 960&#8381;
+        .cost-calculation__item
+          dt.cost-calculation__term Сбор за услуги: скидка 2 179&#8381;
+            i.info
+          dd.cost-calculation__number 0 &#8381;
+        .cost-calculation__item
+          dt.cost-calculation__term Сбор за дополнительные услуги
+            i.info
+          dd.cost-calculation__number 300 &#8381;
+        .cost-calculation__item.cost-calculation__item--total-sum
+          dt.cost-calculation__total Итого
+          dd.cost-calculation__sum 38 081&#8381;
+
+      a(href="#").button.button--wide Забронировать
+        svg.button--svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
+
+  //- Вход
+  section.cards.cards--input
+    form.cards-form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+      fieldset.form__fieldset
+          legend.form__legend.cards__title.cards__title--input Войти
+          ul.form__list.form__list--input
+            li.form__item
+              label.form__label.visually-hidden(for='field-email') Поле для ввода email адреса
+              input#field-email.form__input(type='text' name='email' placeholder='Email')
+            li.form__item
+              label.form__label.visually-hidden(for='field-password') Поле для ввода пароля
+              input#field-password.form__input(type='password' name='password' placeholder='Пароль')
+
+          a(href="#").button.button--wide Войти
+            svg.button--svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
+      .cards__sign-in
+        p.cards__sign-in-text Нет аккаунта на Toxin
+        button(type="button").button.button--default Создать

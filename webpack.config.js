@@ -84,7 +84,7 @@ module.exports = {
       },
       // {
       //   test: /\.(jpe?g|png|gif|svg)$/,
-      //   // loader: 'file-loader',
+      //   loader: 'file-loader',
       // },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,

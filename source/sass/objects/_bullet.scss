@@ -1,0 +1,25 @@
+.bullet {
+  width: 260px;
+}
+
+.bullet__title {
+  margin-bottom: 8px;
+}
+
+.bullet__text {
+  position: relative;
+  line-height: 24px;
+  padding: 5px 0 5px 22px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $blue-crayola;
+    border-radius: 50%;
+    left: 0;
+    top: 11px;
+  }
+}

@@ -7,7 +7,19 @@
 }
 
 @mixin h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $cobalt-blue;
+}
+
+@mixin h3 {
   font-size: 18px;
+  font-weight: 700;
+  color: $cobalt-blue;
+}
+
+@mixin h4 {
+  font-size: 12px;
   font-weight: 700;
   color: $cobalt-blue;
 }

@@ -1,0 +1,36 @@
+.cost-calculation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  line-height: 14px;
+}
+
+.cost-calculation__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+
+  &--total-sum {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 19px;
+    color: $cobalt-blue;
+    position: relative;
+    margin: 30px -8px 11px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 182px;
+      height: 2px;
+      border-bottom: 1px dashed $blue-crayola;
+      top: 12px;
+      left: 63px;
+    }
+  }
+}
+
+.cost-calculation__term {
+  max-width: 220px;
+  line-height: 15px;
+}

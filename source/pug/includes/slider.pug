@@ -1,0 +1,334 @@
+//- Cards slider 1
+
+.slider-wrap
+  ul.list.slider__card.slider
+    li.slide.slide--active
+      article.cards.cards--rooms
+        .cards__img-wrap
+          picture
+            source(type="image/webp" media="(min-width: 960px)" srcset="img/photo-room.webp")
+            //- source(type="image/webp" media="(min-width: 660px)" srcset="img/photo-room.webp")
+            //- source(type="image/webp" srcset="img/photo-room.webp")
+            source(media="(min-width: 960px)" srcset="img/photo-room.png")
+            //- source(media="(min-width: 660px)" srcset="img/photo-room.png")
+            img.cards__img(src="../img/photo-room.jpg", alt="Изображение комнаты")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 888
+            span.cards__span-left.cards__span-left--info люкс
+            span.cards__span-right.cards__span-right--info 9 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form.form--rooms(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text  Отзывов
+    li.slide
+      article.cards.cards--rooms
+        .cards__img-wrap
+          picture
+              source(type="image/webp" media="(min-width: 960px)" srcset="img/photo-room.webp")
+              //- source(type="image/webp" media="(min-width: 660px)" srcset="img/photo-room.webp")
+              //- source(type="image/webp" srcset="img/photo-room.webp")
+              source(media="(min-width: 960px)" srcset="img/photo-room.png")
+              //- source(media="(min-width: 660px)" srcset="img/photo-room.png")
+              img.cards__img(src="../img/photo-room.jpg", alt="Изображение комнаты 1")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 222
+            span.cards__span-left.cards__span-left--info комфорт
+            span.cards__span-right.cards__span-right--info 3 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text Отзывов
+    li.slide
+      article.cards.cards--rooms
+        .cards__img-wrap
+          picture
+            source(type="image/webp" media="(min-width: 960px)" srcset="img/photo-room.webp")
+            //- source(type="image/webp" media="(min-width: 660px)" srcset="img/photo-room.webp")
+            //- source(type="image/webp" srcset="img/photo-room.webp")
+            source(media="(min-width: 960px)" srcset="img/photo-room.png")
+            //- source(media="(min-width: 660px)" srcset="img/photo-room.png")
+            img.cards__img(src="../img/photo-room.jpg", alt="Изображение комнаты 2")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 111
+            span.cards__span-left.cards__span-left--info эконом
+            span.cards__span-right.cards__span-right--info 1 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text Отзывов
+    li.slide
+      article.cards.cards--rooms
+        .cards__img-wrap
+          img(src="../img/photo-room.jpg", alt="Изображение комнаты 3")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 555
+            span.cards__span-left.cards__span-left--info семейный
+            span.cards__span-right.cards__span-right--info 5 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text Отзывов
+  ul.list.dots
+    li.dots__item
+      button.dots__btn.dots__btn--active(type="button")
+        span.visually-hidden Первый слайд
+    li.dots__item
+      button.dots__btn(type="button")
+        span.visually-hidden Второй слайд
+    li.dots__item
+      button.dots__btn(type="button")
+        span.visually-hidden Третий слайд
+    li.dots__item
+      button.dots__btn(type="button")
+        span.visually-hidden Четвертый слайд
+  ul.list.control
+    li.control__item
+      button.control-btn.control-btn--left(type="button")
+        span.visually-hidden Стрелка влево
+    li.slider__item
+      button.control-btn.control-btn--right(type="button")
+        span.visually-hidden Стрелка вправо
+
+//- Cards slider 2
+
+
+.slider-wrap
+  ul.list.slider__card.slider
+    li.slide.slide--active
+      article.cards.cards--rooms
+        .cards__img-wrap
+          picture
+            source(type="image/webp" media="(min-width: 960px)" srcset="img/photo-room-1.webp")
+            //- source(type="image/webp" media="(min-width: 660px)" srcset="img/photo-room.webp")
+            //- source(type="image/webp" srcset="img/photo-room.webp")
+            source(media="(min-width: 960px)" srcset="img/photo-room-1.png")
+            //- source(media="(min-width: 660px)" srcset="img/photo-room.png")
+            img.cards__img(src="../img/photo-room-1.jpg", alt="Изображение комнаты")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 840
+            span.cards__span-left.cards__span-left--info люкс
+            span.cards__span-right.cards__span-right--info 9 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form.form--rooms(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text  Отзывов
+    li.slide
+      article.cards.cards--rooms
+        .cards__img-wrap
+          picture
+              source(type="image/webp" media="(min-width: 960px)" srcset="img/photo-room-1.webp")
+              //- source(type="image/webp" media="(min-width: 660px)" srcset="img/photo-room.webp")
+              //- source(type="image/webp" srcset="img/photo-room.webp")
+              source(media="(min-width: 960px)" srcset="img/photo-room-1.png")
+              //- source(media="(min-width: 660px)" srcset="img/photo-room.png")
+              img.cards__img(src="../img/photo-room-1.jpg", alt="Изображение комнаты 1")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 820
+            span.cards__span-left.cards__span-left--info комфорт
+            span.cards__span-right.cards__span-right--info 3 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text Отзывов
+    li.slide
+      article.cards.cards--rooms
+        .cards__img-wrap
+          picture
+            source(type="image/webp" media="(min-width: 960px)" srcset="img/photo-room-1.webp")
+            //- source(type="image/webp" media="(min-width: 660px)" srcset="img/photo-room.webp")
+            //- source(type="image/webp" srcset="img/photo-room.webp")
+            source(media="(min-width: 960px)" srcset="img/photo-room-1.png")
+            //- source(media="(min-width: 660px)" srcset="img/photo-room.png")
+            img.cards__img(src="../img/photo-room-1.jpg", alt="Изображение комнаты 2")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 810
+            span.cards__span-left.cards__span-left--info эконом
+            span.cards__span-right.cards__span-right--info 1 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text Отзывов
+    li.slide
+      article.cards.cards--rooms
+        .cards__img-wrap
+          picture
+            source(type="image/webp" media="(min-width: 960px)" srcset="img/photo-room-1.webp")
+            //- source(type="image/webp" media="(min-width: 660px)" srcset="img/photo-room.webp")
+            //- source(type="image/webp" srcset="img/photo-room.webp")
+            source(media="(min-width: 960px)" srcset="img/photo-room-1.png")
+            //- source(media="(min-width: 660px)" srcset="img/photo-room.png")
+            img.cards__img(src="../img/photo-room-1.jpg", alt="Изображение комнаты 2")
+        .cards__info
+          h2.cards__title.cards__title--info
+            b.cards__title-mark.cards__title-mark--info &#8470;
+            | 555
+            span.cards__span-left.cards__span-left--info семейный
+            span.cards__span-right.cards__span-right--info 5 990₽
+              small.cards__small-right.cards__small-right-info  в сутки
+          .cards__rating-review
+            form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
+              .form__rating.form__rating--rooms
+                  input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-1')
+
+                  input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+                  label.form__label-rating(for='input-rate-2')
+
+                  input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-3')
+
+                  input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-4')
+
+                  input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+                  label.form__label-rating(for='input-rate-5')
+            .cards__review-wrap
+              b.cards__review-number 145
+                span.cards__review-text Отзывов
+  ul.list.dots
+    li.dots__item
+      button.dots__btn.dots__btn--active(type="button")
+        span.visually-hidden Первый слайд
+    li.dots__item
+      button.dots__btn(type="button")
+        span.visually-hidden Второй слайд
+    li.dots__item
+      button.dots__btn(type="button")
+        span.visually-hidden Третий слайд
+    li.dots__item
+      button.dots__btn(type="button")
+        span.visually-hidden Четвертый слайд
+

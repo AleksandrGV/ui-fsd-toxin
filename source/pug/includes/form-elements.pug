@@ -1,218 +1,258 @@
 //- Form elements
 
-section.form-elements
+section.form-elements.container
   form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
-    label.form__label(for='default')
-      | Text Field
-      span.form__label-span Default
-    input#default.form__input(type='text' placeholder='Email')
-    label.form__label(for='hover-focus')
-      | Text Field
-      span.form__label-span Hover / Focus
-    input#hover-focus.form__input(type='text' placeholder='This is pretty awesome')
-    .dropdown
-      h4.dropdown__title Dropdown
-      .dropdown__wrap
-        button.button.dropdown__button(type='button') Сколько гостей
-        button.dropdown__button 1
-        button.dropdown__button 2
-        button.dropdown__button 3
-        button.dropdown__button 4
-    label.form__label(for='masked') masked text field
-    input#masked.form__input(type='text' placeholder='ДД.ММ.ГГГГ')
-    .dropdown
-      h4.dropdown__title date dropdown
-      .dropdown__wrap
-        button.button.dropdown__button(type='button') ДД.ММ.ГГГГ
-    .dropdown
-      h4.dropdown__title date dropdown
-      .dropdown__wrap
-        button.button.dropdown__button(type='button') 19.08.2019
-    .dropdown
-      h4.dropdown__title filter date dropdown
-      .dropdown__wrap
-        button.button.dropdown__button(type='button') 19 авг - 23 авг
-    label.form__label(for='subscription-email') subscription text field
-    input#subscription-email.form__input(type='text' placeholder='Email')
-    button.subscription(type='submit')
-      span.visually-hidden Отправить
-    //- Rooms places
-    .dropdown
-      h4.dropdown__title
-        | dropdown
-        span.form__title-span Default
-      .dropdown__wrap
-        button.button.dropdown__button(type='button') 2 спальни, 2 кровати...
-    .dropdown
-      h4.dropdown__title
-        | dropdown
-        span.form__title-span Expanded
-      .dropdown__wrap
-        button.button.dropdown__button(type='button') 2 спальни, 2 кровати...
-        button.dropdown__button(type='button')
-          | спальни
-          span.dropdown__button-span 2
-        button.dropdown__button(type='button')
-          | кровати
-          span.dropdown__button-span 2
-        button.dropdown__button(type='button')
-          | ванные комнаты
-          span.dropdown__button-span 0
-    fieldset.form__checkbox
-      legend.form__checkbox-title expandable checkbox list
-    fieldset.form__fieldset.form__fieldset--checkbox
-      legend.form__checkbox-title expandable checkbox list
-      .form__checkbox-wrap
-        ul.form__list.form__list--checkbox
-          li.form__item-checkbox.form__item-checkbox--1
-            input#input-checkbox-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
-            label.form__label-checkbox(for='input-checkbox-1') Завтрак
-          li.form__item-checkbox.form__item-checkbox--2
-            input#input-checkbox-2.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-2' checked='')
-            label.form__label-checkbox(for='input-checkbox-2') Письменный стол
-          li.form__item-checkbox.form__item-checkbox--3
-            input#input-checkbox-3.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-3' checked='')
-            label.form__label-checkbox(for='input-checkbox-3') Стул для кормления
-          li.form__item-checkbox.form__item-checkbox--4
-            input#input-checkbox-4.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-4' checked='')
-            label.form__label-checkbox(for='input-checkbox-3') Кроватка
-          li.form__item-checkbox.form__item-checkbox--5
-            input#input-checkbox-5.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-5')
-            label.form__label-checkbox(for='input-checkbox-5') Телевизор
-          li.form__item-checkbox.form__item-checkbox--6
-            input#input-checkbox-6.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-6')
-            label.form__label-checkbox(for='input-checkbox-6') Шампунь
-    fieldset.form__fieldset.form__fieldset--checkbox
-      legend.form__legend Checkbox Buttons
-      .form__checkbox-wrap
-        ul.form__list.form__list--checkbox
-          li.form__item-checkbox.form__item-checkbox--1
-            input#checkbox-buttons.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
-            label.form__label(for='checkbox-buttons') Можно курить
-          li.form__item-checkbox.form__item-checkbox--2
-            input#checkbox-buttons-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-2' checked='')
-            label.form__label(for='checkbox-buttons-1') Можно с питомцами
-          li.form__item-checkbox.form__item-checkbox--3
-            input#checkbox-buttons-2.form__input-checkbox(type='checkbox' name='checkbox-3' checked='')
-            label.form__label(for='checkbox-buttons-2') Можно пригласить гостей (до 10 человек)
-    fieldset.form__fieldset.form__fieldset--radio
-      legend.form__legend Radio Buttons
-      .form__radio-wrap
-        ul.form__list.form__list--radio
-          li.form__item-radio
-            input#input-radio-1.visually-hidden.form__input-radio(type='radio' name='gender-selection' checked='')
-            label.form__label(for='input-radio-1') Мужчина
-          li.form__item-radio
-            input#input-radio-2.visually-hidden.form__input-radio(type='radio' name='gender-selection')
-            label.form__label(for='input-radio-2') Женщина
-    fieldset.form__fieldset
-      legend.form__legend Toggle
-      .form__toggle-wrap
-        ul.form__list.form__list-toggle
-          li.form__item-toggle.form__item-toggle--1
-            input#input-toggle-1.visually-hidden.form__input-toggle(type='checkbox' name='toggle-checkbox-1' checked='')
-            label.form__label(for='input-toggle-1') Получать спецпредложения
-          li.form__item-toggle.form__item-toggle--2
-            input#input-toggle-2.visually-hidden.form__input-toggle(type='checkbox' name='toggle-checkbox-2')
-            label.form__label(for='input-toggle-2') Получать спецпредложения
-    button.button__like(type='button')
-      span.visually-hidden Кнопка не нажата
-    button.button__like(type='button')
-      span.visually-hidden Кнопка нажата
-    fieldset.form__fieldset
-      legend.form__legend rate button
-      ul.form__list.form__list-star
-        li.form__item-star
-          input#input-rate-1.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-1')
-        li.form__item-star
-          input#input-rate-2.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-2')
-        li.form__item-star
-          input#input-rate-3.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-3')
-        li.form__item-star
-          input#input-rate-4.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-4')
-        li.form__item-star
-          input#input-rate-5.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-5')
-      ul.form__list.form__list-star
-        li.form__item-star
-          input#input-rate-6.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-6')
-        li.form__item-star
-          input#input-rate-7.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-7')
-        li.form__item-star
-          input#input-rate-8.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-8')
-        li.form__item-star
-          input#input-rate-9.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-9')
-        li.form__item-star
-          input#input-rate-10.visually-hidden.form__input-rate(type='checkbox' name='rate')
-          label.form__label(for='input-rate-10')
-    //- Количество гостей по умолчанию
-    .dropdown.dropdown--default-guests
-    h4.dropdown__title
-      | dropdown
-    .dropdown__wrap
-      button.button.dropdown__button(type='button') Сколько гостей
-      button.dropdown__button(type='button')
-        | Взрослые
-        span.dropdown__button-span 0
-      button.dropdown__button(type='button')
-        | Дети
-        span.dropdown__button-span 0
-      button.dropdown__button(type='button')
-        | Млыденцы
-        span.dropdown__button-span 0
-      a(href="#").dropdown__button Применить
+    .form__wrap
+      label.form__label(for='default')
+        | Text Field
+        span.form__label--span Default
+      input#default.form__input(type='text' placeholder='Email')
+      label.form__label(for='hover-focus')
+        | Text Field
+        span.form__label--span Hover / Focus
+      input#hover-focus.form__input(type='text' placeholder='This is pretty awesome')
+      //- Dropdown количество гостей
+      .dropdown
+        h4.dropdown__title Dropdown
+        ul.dropdown__list
+          li.dropdown__item
+            a.dropdown__link(href="#") Сколько гостей
+      .form__masked
+        label.form__label(for='masked') masked text field
+        input#masked.form__input(type='text' placeholder='ДД.ММ.ГГГГ')
+      //- Dropdown date
+      .dropdown-date
+        .dropdown
+          h4.dropdown__title date dropdown
+          ul.dropdown__list
+            li.dropdown__item
+              a.dropdown__link(href="#") ДД.ММ.ГГГГ
+        .dropdown
+          h4.dropdown__title date dropdown
+          ul.dropdown__list
+            li.dropdown__item
+              a.dropdown__link(href="#") 19.08.2019
+      //- Dropdown date filter
+      .dropdown.dropdown--filter-date
+        h4.dropdown__title filter date dropdown
+        ul.dropdown__list
+            li.dropdown__item.inner
+              a.dropdown__link(href="#") 19 авг - 23 авг
+      //- Subscription text field
+      .subscription
+        label.form__label(for='subscription-email') subscription text field
+        input#subscription-email.form__input.inner(type='text' placeholder='Email')
+        button.subscription__button(type='submit')
+          span.visually-hidden Отправить
+          svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
+            defs
+              linearGradient(id="paint0_linear" x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse")
+                stop(offset="0" stop-color="#BC9CFF")
+                stop(offset="1" stop-color="#8BA4F9")
+      //- Rooms places default
+      .dropdown.dropdown--narrow
+        h4.dropdown__title Dropdown
+          span.dropdown__title--span Default
+        ul.dropdown__list
+          li.dropdown__item
+            a.dropdown__link(href="#") 2 спальни, 2 кровати...
+      //- Dropdown rooms extended
+      .dropdown.dropdown--narrow.dropdown--narrow-2
+        h4.dropdown__title Dropdown
+          span.dropdown__title--span Expanded
+        ul.dropdown__list
+          li.dropdown__item
+            a.dropdown__link(href="#") 2 спальни, 2 кровати...
+            ul.dropdown__list--sub
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Спальни
+                  span.dropdown__link--span 2
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Кровати
+                  span.dropdown__link--span 2
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Ванные комнаты
+                  span.dropdown__link--span 0
+      //- Checkbox closed
+      .checkbox-list
+        .checkbox-list__close
+            a.checkbox-list__link(href="#") expandable checkbox list
+      //- Dropdown checkbox open
+      .checkbox-list
+        .checkbox-list__open
+            a.checkbox-list__link.checkbox-list__link--open(href="#") expandable checkbox list
+            ul.form__list.form__list--checkbox
+              li.form__item-checkbox.form__item-checkbox--1
+                input#input-checkbox-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
+                label.form__label-checkbox(for='input-checkbox-1') Завтрак
+              li.form__item-checkbox.form__item-checkbox--2
+                input#input-checkbox-2.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-2' checked)
+                label.form__label-checkbox(for='input-checkbox-2') Письменный стол
+              li.form__item-checkbox.form__item-checkbox--3
+                input#input-checkbox-3.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-3' checked)
+                label.form__label-checkbox(for='input-checkbox-3') Стул для кормления
+              li.form__item-checkbox.form__item-checkbox--4
+                input#input-checkbox-4.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-4' checked)
+                label.form__label-checkbox(for='input-checkbox-4') Кроватка
+              li.form__item-checkbox.form__item-checkbox--5
+                input#input-checkbox-5.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-5')
+                label.form__label-checkbox(for='input-checkbox-5') Телевизор
+              li.form__item-checkbox.form__item-checkbox--6
+                input#input-checkbox-6.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-6')
+                label.form__label-checkbox(for='input-checkbox-6') Шампунь
+    .form__wrap
+      fieldset.form__fieldset.form__fieldset--checkbox
+        legend.form__legend Checkbox Buttons
+        .form__checkbox-wrap
+          ul.form__list.form__list--checkbox.form__list--checkbox-buttons
+            li.form__item-checkbox.form__item-checkbox--1
+              input#checkbox-buttons-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
+              label.form__label-checkbox(for='checkbox-buttons-1') Можно курить
+            li.form__item-checkbox.form__item-checkbox--2
+              input#checkbox-buttons-2.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-2' checked)
+              label.form__label-checkbox(for='checkbox-buttons-2') Можно с питомцами
+            li.form__item-checkbox.form__item-checkbox--3
+              input#checkbox-buttons-3.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-3' checked)
+              label.form__label-checkbox(for='checkbox-buttons-3') Можно пригласить гостей (до 10 человек)
+      //- Radio
+      fieldset.form__fieldset.form__fieldset--radio
+        legend.form__legend Radio Buttons
+        .form__radio-wrap
+          ul.form__list.form__list--radio
+            li.form__item
+              input#input-radio-man.visually-hidden.form__input-radio(type='radio' name='gender-selection' checked)
+              label.form__label-radio(for='input-radio-man') Мужчина
+            li.form__item
+              input#input-radio-woman.visually-hidden.form__input-radio(type='radio' name='gender-selection')
+              label.form__label-radio(for='input-radio-woman') Женщина
+      //- Toggle
+      fieldset.form__fieldset.form__fieldset--toggle
+        legend.form__legend.form__legend--toggle Toggle
+        .form__toggle-wrap
+          ul.form__list.form__list-toggle
+            li.form__item-toggle.form__item-toggle--1
+              input#input-toggle-1.visually-hidden.form__input-toggle(type='checkbox' name='toggle-checkbox-1' checked)
+              label.form__label-toggle(for='input-toggle-1') Получать спецпредложения
+            li.form__item-toggle.form__item-toggle--2
+              input#input-toggle-2.visually-hidden.form__input-toggle(type='checkbox' name='toggle-checkbox-2')
+              label.form__label-toggle(for='input-toggle-2') Получать спецпредложения
+      //- Like button
+      .like
+        h4.like__title Like button
+        button.like__button(type='button') 2
+          span.visually-hidden Кнопка не нажата
+        button.like__button.like__button--pressed(type='button') 12
+          span.visually-hidden Кнопка нажата
+      //-  rating
+      fieldset.form__fieldset
+        legend.form__legend.form__legend--rate rate button
+        .form__rating-wrap
+          .form__rating
+              input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-1')
+
+              input#input-rate-2.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+              label.form__label-rating(for='input-rate-2')
+
+              input#input-rate-3.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-3')
+
+              input#input-rate-4.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-4')
+
+              input#input-rate-5.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-5')
+
+          .form__rating
+              input#input-rate-6.visually-hidden.form__input-rating(type='radio' name='rate' checked)
+              label.form__label-rating(for='input-rate-6')
+
+              input#input-rate-7.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-7')
+
+              input#input-rate-8.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-8')
+
+              input#input-rate-9.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-9')
+
+              input#input-rate-10.visually-hidden.form__input-rating(type='radio' name='rate')
+              label.form__label-rating(for='input-rate-10')
+      //- Количество гостей по умолчанию
+      .dropdown.dropdown--guests-open
+        h4.dropdown__title Dropdown
+        ul.dropdown__list
+          li.dropdown__item
+            a.dropdown__link(href="#") Сколько гостей
+            ul.dropdown__list--sub
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Взрослые
+                  span.dropdown__link--span 0
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Дети
+                  span.dropdown__link--span 0
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Младенцы
+                  span.dropdown__link--span 0
+              li.dropdown-button__item.dropdown-button__item--right
+                a(href="#").dropdown-button__link Применить
+
+      fieldset.form__fieldset.form__fieldset--checkbox
+        legend.form__legend Rich checkbox buttons
+        .form__checkbox-wrap
+          ul.form__list.form__list--checkbox
+            li.form__item-checkbox.form__item-checkbox--1
+              input#checkbox-btn-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
+              label.form__label-checkbox.form__label-checkbox--conditions(for='checkbox-btn-1') Широкий коридор
+                span.form__label-conditions--span Ширина коридора в номере не менее 91 см.
+            li.form__item-checkbox.form__item-checkbox--2
+              input#checkbox-btn-2.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-2' checked='')
+              label.form__label-checkbox.form__label-checkbox--conditions(for='checkbox-btn-2') Помощник для инвалидов
+                span.form__label-conditions--span.form__label-conditions--span-2 На 1 этаже вас встретит специалист и проводит до номера
+    .form__wrap.form__wrap--3
+      //- Фильтр с диапазоном
+      .range
+        .range__wrap
+          h4.form__title Range slider
+          .range__selected
+            span.range__selected--min 5 000&#8381; -
+            span.range__selected--max  10 000&#8381;
+        .range__filter
+          .range__controls
+            .range__scale
+              .range__bar
+                .range__toggle.range__toggle--min(tabindex="0")
+                .range__toggle.range__toggle--max(tabindex="0")
+
+      //- Buttons
+      include ../mixin/buttons
+
       //- Количество гостей выбрано
-    .dropdown.dropdown--default-guests
-    h4.dropdown__title
-      | dropdown
-    .dropdown__wrap
-      button.button.dropdown__button(type='button') Сколько гостей
-      button.dropdown__button(type='button')
-        | Взрослые
-        span.dropdown__button-span 2
-      button.dropdown__button(type='button')
-        | Дети
-        span.dropdown__button-span 1
-      button.dropdown__button(type='button')
-        | Млыденцы
-        span.dropdown__button-span 0
-      a(href="#").dropdown__button Очистить
-      a(href="#").dropdown__button Применить
-    fieldset.form__fieldset.form__fieldset--checkbox
-      legend.form__legend Rich checkbox buttons
-      .form__checkbox-wrap
-        ul.form__list.form__list--checkbox
-          li.form__item-checkbox.form__item-checkbox--1
-            input#checkbox-buttons.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
-            label.form__label(for='checkbox-buttons') Широкий коридор
-              p Ширина коридора в номере не менне 91 см.
-          li.form__item-checkbox.form__item-checkbox--2
-            input#checkbox-buttons-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-2' checked='')
-            label.form__label(for='checkbox-buttons-1') Помощник для инвалидов
-              p На первом этаже вас встретит специалист и проводит до номера
-    legend.form__legend Bullet list
-      ul.list.bullet
-        li.bullet__item Нельзя с питомцами
-        li.bullet__item Без вечеринок и мероприятий
-        li.bullet__item Время прибытия - после 13:00, а заезд до 12:00
-    //- Фильтр с диапазоном
-    legend.form__legend.range Range slider
-      .range__selected
-        span.range__selected--min 5 000&#8381
-        span.range__selected--max 10 000&#8381
-      .range__filter
-        .range__controls
-          .range__scale
-            .range__bar
-              .range__toggle.range__toggle-min(tabindex="0")
-              .range__toggle.range__toggle-max(tabindex="0")
-
-
+      .dropdown
+        h4.dropdown__title Dropdown
+        ul.dropdown__list
+          li.dropdown__item
+            a.dropdown__link(href="#") 3 гостя
+            ul.dropdown__list--sub
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Взрослые
+                  span.dropdown__link--span 1
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Дети
+                  span.dropdown__link--span 2
+              li.dropdown__item--sub
+                a.dropdown__link--sub(href="#") Младенцы
+                  span.dropdown__link--span 3
+              li.dropdown-button__item
+                a(href="#").dropdown-button__link Очистить
+                a(href="#").dropdown-button__link Применить
+      .bullet
+        h4.form__title.bullet__title Bullet list
+        ul.list
+          li.bullet__item
+            p.bullet__text Нельзя с питомцами
+          li.bullet__item
+            p.bullet__text Без вечеринок и мероприятий
+          li.bullet__item
+            p.bullet__text Время прибытия &mdash; после 13:00, а заезд до 12:00

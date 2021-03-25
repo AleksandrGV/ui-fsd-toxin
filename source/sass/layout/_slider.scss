@@ -1,0 +1,88 @@
+.slider-wrap {
+  width: 270px;
+  position: relative;
+  margin: 20px 20px 36px;
+}
+
+.slider {
+  width: 270px;
+  position: relative;
+}
+
+.slide {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+// Control and dots
+
+.control-btn {
+  position: absolute;
+  background-image: url("../img/arrow_control.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  top: 65px;
+
+  &--left {
+    left: 12px;
+  }
+
+  &--right {
+    transform: rotate(180deg);
+    right: 12px;
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.dots {
+  display: flex;
+  position: absolute;
+  top: 120px;
+  right: 13px;
+
+}
+
+.dots__item {
+  margin-right: 1px;
+}
+
+.dots__btn {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: 0 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 1px solid $white;
+    box-shadow: 0px 5px 5px 0px $blue-crayola;
+    top: 1px;
+    left: 1px;
+    border-radius: 50%;
+  }
+
+  &--active::before {
+    background-color: $white;
+  }
+}

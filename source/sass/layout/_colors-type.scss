@@ -54,7 +54,7 @@
 }
 
 .ui-kit__title {
-  @include h2;
+  @include h3;
 
   letter-spacing: 0.6px;
   margin-bottom: 0;
@@ -68,11 +68,15 @@
 
 // Type
 
+.ui-kit__type {
+  margin-left: 22px;
+}
+
 .ui-kit__type-title {
   font-weight: 700;
   line-height: 29px;
   color: $cobalt-blue;
-  width: 72%;
+  width: 80%;
   margin-top: 17px;
   margin-left: 3px;
 
@@ -100,7 +104,7 @@
 
 .ui-kit__type-text {
   font-size: 14px;
-  width: 60%;
+  width: 65%;
   line-height: 24px;
   margin-left: 3px;
 }
@@ -111,6 +115,8 @@
   top: 0;
   letter-spacing: 2px;
   font-weight: 400;
+  color: $cobalt-blue;
+  opacity: 0.25;
 
   &--1 {
     font-size: 22px;
