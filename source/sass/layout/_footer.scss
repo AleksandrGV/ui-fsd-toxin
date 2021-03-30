@@ -1,0 +1,94 @@
+.page-footer {
+  padding: 50px 0 0;
+}
+
+.page-footer__wrap {
+  margin: 38px 71px 25px 30px;
+}
+
+.page-footer__top {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.page-footer__logo {
+  margin-top: 11px;
+  margin-right: 20px;
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-menu__list {
+  @include list-reset;
+}
+
+.footer-menu__title {
+  @include h4;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+.footer-menu__link {
+  line-height: 39px;
+  color: $manatee;
+  text-decoration: none;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.page-footer__text {
+  line-height: 24px;
+  color: $purplish-blue;
+}
+
+.page-footer__bottom {
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 20px;
+  box-shadow: 0px 10px 20px 0px $pale-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $light-gray;
+    top: 4px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.page-footer__bottom-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 109px 0 31px;
+}
+
+.footer-creative {
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+  box-shadow: 0px 10px 20px $pale-blue;
+  padding: 120px 50px 116px;
+  margin: 9px 335px 30px;
+}
+
+.footer-creative__logo {
+  margin: 0 0 20px;
+}
+
+.footer-creative__text {
+  margin-bottom: 25px;
+}
+
+.footer-creative .socials__item {
+  margin: 0 10px;
+}

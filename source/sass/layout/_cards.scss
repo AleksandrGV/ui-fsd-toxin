@@ -1,18 +1,28 @@
+.cards-background {
+    background-color: $light-gray;
+    z-index: 0;
+    padding: 3px 0 1px;
+}
+
 .container-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin: 0 88px 0 8px;
+  margin: 0 88px 103px 8px;
 }
 .cards {
   width: 380px;
   border: 1px solid $gainsborough;
-  padding: 21px 30px 28px;
+  padding: 21px 27px 28px 31px;
   box-shadow: 0px 0px 25px 0px $light-telegrey;
-  margin: 20px 20px 39px;
+  margin: 18px 20px 39px;
   background-color: $white;
   z-index: 0;
   border-radius: 4px;
+
+  &--sign-up {
+    padding: 23px 22px 20px 31px;;
+  }
 
   .dropdown {
     margin-bottom: 4px;
@@ -47,27 +57,27 @@
   }
 
   &--input {
-    padding-top: 41px;
-    padding-left: 26px;
+    padding-top: 40px;
+    padding-left: 29px;
+    padding-right: 22px;
   }
 
   &--filter {
-    padding-right: 26px;
+    padding-right: 21px;
+    padding-top: 23px;
   }
-}
-
-.cards-form .form__item {
-  margin-bottom: 9px;
-
-    &--man {
-      margin-right: 12px;
-    }
 }
 
 .cards__sign-in {
   display: flex;
   justify-content: space-between;
   margin-top: 29px;
+  margin-right: 3px;
+  margin-bottom: 7px;
+
+  &--input {
+    margin-bottom: 0;
+  }
 }
 
 .cards__title {
@@ -100,7 +110,12 @@
   }
 
   &--input {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
+  }
+
+  &--filter {
+    margin-bottom: 15px;
+    margin-right: 6px;
   }
 }
 

@@ -1,4 +1,78 @@
+//- Header не авторизованный
 block header
-  header.page__header
-    a(href="index.html").logo
+  .background
+    a.logo-group
       img.logo__img(src="../../img/logo_group.svg" alt="Logotype")
+    .header
+      .container
+        header.page-header
+          a(href="index.html").logo
+            img.logo__img(src="../../img/logo.svg" alt="Logotype")
+          nav.main-menu
+            ul.main-menu__list
+              li.main-menu__item
+                a.main-menu__link.main-menu__link--active О нас
+              li.main-menu__item
+                a.main-menu__link.main-menu__link--dropdown(href="#!") Услуги
+                ul.list.main-menu__list--sub
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 1
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 2
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 3
+              li.main-menu__item
+                a.main-menu__link(href="№") Вакансии
+              li.main-menu__item
+                a.main-menu__link(href="#!") Новости
+              li.main-menu__item
+                a.main-menu__link.main-menu__link--dropdown(href="#!") Соглашения
+                ul.list.main-menu__list--sub
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 1
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 2
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 3
+            .user
+              .user__wrap
+                a.button.button--default.sign-in(href="#!") Войти
+                a.button.button--wide.sign-up(href="#!") Зарегистрироваться
+
+      //- Header авторизованный пользователь
+    .header
+      .container
+        header.page-header.page-header--authorized
+          a(href="index.html").logo
+            img.logo__img(src="../img/logo.svg" alt="Logotype")
+          nav.main-menu.main-menu--authorized
+            ul.main-menu__list.main-menu__list--authorized
+              li.main-menu__item
+                a.main-menu__link.main-menu__link--active О нас
+              li.main-menu__item
+                a.main-menu__link.main-menu__link--dropdown(href="#!") Услуги
+                ul.list.main-menu__list--sub
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 1
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 2
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 3
+              li.main-menu__item
+                a.main-menu__link(href="№") Вакансии
+              li.main-menu__item
+                a.main-menu__link(href="#!") Новости
+              li.main-menu__item
+                a.main-menu__link.main-menu__link--dropdown(href="#!") Соглашения
+                ul.list.main-menu__list--sub
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 1
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 2
+                  li.main-menu__item--sub
+                    a.main-menu__link--sub(href="#!") 3
+            .user.user--authorized
+              a.main-menu__link.user-name(href="#!") Юлий Цезарь
+
+
+

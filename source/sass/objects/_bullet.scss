@@ -2,6 +2,10 @@
   width: 260px;
 }
 
+.bullet__list {
+  @include list-reset;
+}
+
 .bullet__title {
   margin-bottom: 8px;
 }
@@ -9,7 +13,7 @@
 .bullet__text {
   position: relative;
   line-height: 24px;
-  padding: 5px 0 5px 22px;
+  padding: 5px 0 5px 21px;
   margin: 0;
 
   &::before {

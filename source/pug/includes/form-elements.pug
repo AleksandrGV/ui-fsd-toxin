@@ -3,14 +3,17 @@
 section.form-elements.container
   form.form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
     .form__wrap
-      label.form__label(for='default')
-        | Text Field
-        span.form__label--span Default
-      input#default.form__input(type='text' placeholder='Email')
-      label.form__label(for='hover-focus')
-        | Text Field
-        span.form__label--span Hover / Focus
-      input#hover-focus.form__input(type='text' placeholder='This is pretty awesome')
+      ul.form__list
+        li.form__item
+          label.form__label(for='default')
+            | Text Field
+            span.form__label--span Default
+          input#default.form__input(type='text' placeholder='Email')
+        li.form__item
+          label.form__label(for='hover-focus')
+            | Text Field
+            span.form__label--span Hover / Focus
+          input#hover-focus.form__input(type='text' placeholder='This is pretty awesome')
       //- Dropdown количество гостей
       .dropdown
         h4.dropdown__title Dropdown
@@ -39,10 +42,10 @@ section.form-elements.container
             li.dropdown__item.inner
               a.dropdown__link(href="#") 19 авг - 23 авг
       //- Subscription text field
-      .subscription
+      .subscription-field
         label.form__label(for='subscription-email') subscription text field
         input#subscription-email.form__input.inner(type='text' placeholder='Email')
-        button.subscription__button(type='submit')
+        button.subscription-field__button.subscription-field__button--form(type='submit')
           span.visually-hidden Отправить
           svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
             path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
@@ -104,7 +107,7 @@ section.form-elements.container
     .form__wrap
       fieldset.form__fieldset.form__fieldset--checkbox
         legend.form__legend Checkbox Buttons
-        .form__checkbox-wrap
+        .form__wrap-checkbox
           ul.form__list.form__list--checkbox.form__list--checkbox-buttons
             li.form__item-checkbox.form__item-checkbox--1
               input#checkbox-buttons-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
@@ -120,23 +123,23 @@ section.form-elements.container
         legend.form__legend Radio Buttons
         .form__radio-wrap
           ul.form__list.form__list--radio
-            li.form__item
+            li.form__item.form__item--radio
               input#input-radio-man.visually-hidden.form__input-radio(type='radio' name='gender-selection' checked)
               label.form__label-radio(for='input-radio-man') Мужчина
-            li.form__item
+            li.form__item.form__item--radio
               input#input-radio-woman.visually-hidden.form__input-radio(type='radio' name='gender-selection')
               label.form__label-radio(for='input-radio-woman') Женщина
       //- Toggle
       fieldset.form__fieldset.form__fieldset--toggle
         legend.form__legend.form__legend--toggle Toggle
-        .form__toggle-wrap
-          ul.form__list.form__list-toggle
-            li.form__item-toggle.form__item-toggle--1
-              input#input-toggle-1.visually-hidden.form__input-toggle(type='checkbox' name='toggle-checkbox-1' checked)
-              label.form__label-toggle(for='input-toggle-1') Получать спецпредложения
-            li.form__item-toggle.form__item-toggle--2
-              input#input-toggle-2.visually-hidden.form__input-toggle(type='checkbox' name='toggle-checkbox-2')
-              label.form__label-toggle(for='input-toggle-2') Получать спецпредложения
+        .form__wrap-toggle
+          ul.form__list.form__list--toggle
+            li.form__item.form__item--toggle.form__item--toggle-1
+              input#input-toggle-1.visually-hidden.form__input.form__input--toggle(type='checkbox' name='toggle-checkbox-1' checked)
+              label.form__label.form__label--toggle(for='input-toggle-1') Получать спецпредложения
+            li.form__item.form__item--toggle.form__item--toggle-2
+              input#input-toggle-2.visually-hidden.form__input.form__input--toggle(type='checkbox' name='toggle-checkbox-2')
+              label.form__label.form__label--toggle(for='input-toggle-2') Получать спецпредложения
       //- Like button
       .like
         h4.like__title Like button
@@ -147,7 +150,7 @@ section.form-elements.container
       //-  rating
       fieldset.form__fieldset
         legend.form__legend.form__legend--rate rate button
-        .form__rating-wrap
+        .form__wrap-rating
           .form__rating
               input#input-rate-1.visually-hidden.form__input-rating(type='radio' name='rate')
               label.form__label-rating(for='input-rate-1')
@@ -181,7 +184,7 @@ section.form-elements.container
               label.form__label-rating(for='input-rate-10')
       //- Количество гостей по умолчанию
       .dropdown.dropdown--guests-open
-        h4.dropdown__title Dropdown
+        h4.dropdown__title.dropdown__title--guests-open Dropdown
         ul.dropdown__list
           li.dropdown__item
             a.dropdown__link(href="#") Сколько гостей
@@ -196,11 +199,11 @@ section.form-elements.container
                 a.dropdown__link--sub(href="#") Младенцы
                   span.dropdown__link--span 0
               li.dropdown-button__item.dropdown-button__item--right
-                a(href="#").dropdown-button__link Применить
+                a(href="#!").dropdown-button__link Применить
 
       fieldset.form__fieldset.form__fieldset--checkbox
-        legend.form__legend Rich checkbox buttons
-        .form__checkbox-wrap
+        legend.form__legend.form__legend--rich-checkbox Rich checkbox buttons
+        .form__wrap-checkbox
           ul.form__list.form__list--checkbox
             li.form__item-checkbox.form__item-checkbox--1
               input#checkbox-btn-1.visually-hidden.form__input-checkbox(type='checkbox' name='checkbox-1')
@@ -237,19 +240,19 @@ section.form-elements.container
             ul.dropdown__list--sub
               li.dropdown__item--sub
                 a.dropdown__link--sub(href="#") Взрослые
-                  span.dropdown__link--span 1
+                  span.dropdown__link--span.dropdown__link--span-guest 2
               li.dropdown__item--sub
                 a.dropdown__link--sub(href="#") Дети
-                  span.dropdown__link--span 2
+                  span.dropdown__link--span.dropdown__link--span-guest 1
               li.dropdown__item--sub
                 a.dropdown__link--sub(href="#") Младенцы
-                  span.dropdown__link--span 3
+                  span.dropdown__link--span.dropdown__link--span-guest 0
               li.dropdown-button__item
-                a(href="#").dropdown-button__link Очистить
-                a(href="#").dropdown-button__link Применить
+                a(href="#!").dropdown-button__link Очистить
+                a(href="#!").dropdown-button__link Применить
       .bullet
         h4.form__title.bullet__title Bullet list
-        ul.list
+        ul.bullet__list
           li.bullet__item
             p.bullet__text Нельзя с питомцами
           li.bullet__item

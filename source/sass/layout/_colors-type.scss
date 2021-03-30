@@ -1,5 +1,8 @@
-.logo {
-  margin-bottom: 48px;
+.ui-kit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 22px;
+  margin-bottom: 115px;
 }
 
 .ui-kit__list {

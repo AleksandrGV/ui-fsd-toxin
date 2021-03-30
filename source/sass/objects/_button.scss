@@ -1,14 +1,22 @@
-.subscription__button {
+.subscription-field__button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 220px;
+  left: 218px;
   border: none;
   background: none;
-  padding: 15px 15px 10px;
+  padding: 13px 14px 10px 17px;
+
+  &--form {
+    top: 42px;
+  }
 
   &--img {
     margin-top: 5px;
+  }
+
+  &:hover {
+    opacity: .5;
   }
 }
 
@@ -17,12 +25,12 @@
 .like__button {
   width: 40px;
   height: 21px;
-  font-size: 10px;
+  font-size: 9px;
   color: $blue-crayola;
   border: 1px solid $blue-crayola;
   border-radius: 10px;
   background: none;
-  padding: 3px 6px 5px 20px;
+  padding: 4px 8px 5px 20px;
   margin-right: 6px;
   position: relative;
   background-image: url("../img/heart_border.svg");
@@ -60,22 +68,6 @@
   fill-opacity: 1;
 }
 
-.dropdown-button {
-  @include list-reset;
-  display: flex;
-  justify-content: space-between;
-}
-
-.dropdown-button__item {
-  display: flex;
-  justify-content: space-between;
-
-  &--right {
-    display: block;
-    text-align: right;
-  }
-}
-
 .dropdown-button__link {
   color: $purple;
   font-size: 12px;
@@ -83,33 +75,42 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: right;
-  display: block;
-  margin: 21px 0 19px;
+  display: inline-block;
+  padding: 8px 0;
 }
 
 // Button
 
 .button__container {
-  width: 220px;
+  width: 216px;
   display: flex;
   flex-direction: column;
 
   &-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 30px 20px;
+    margin-bottom: 30px;
   }
 }
 
 .button__title {
   @include h4;
   text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.button-big {
+  margin-bottom: 40px;
+
+  &--card {
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
 }
 
 .button,
 .pagination__button--active {
-  width: 100px;
   @include h4;
   position: relative;
   text-transform: uppercase;
@@ -132,7 +133,7 @@
     fill: $white;
   }
 
-  &--hover {
+  &:hover {
     opacity: .5;
   }
 
@@ -142,6 +143,8 @@
     z-index: 1;
     color: $purple;
     border: 1px solid $black;
+    text-align: center;
+    text-decoration: none;
 
     &::before {
       content: "";
@@ -157,12 +160,19 @@
     }
   }
 
+  &--sign-in {
+    padding: 15px 29px;
+  }
+
   &--wide {
     width: 100%;
     display: block;
     text-decoration: none;
     text-align: center;
-    margin-bottom: 0;
+  }
+
+  &--input {
+    padding: 15px 21px;
   }
 }
 
@@ -191,10 +201,11 @@
 // Pagination
 
 .pagination {
+  width: 240px;
   @include list-reset;
   display: flex;
   justify-content: space-between;
-  margin-right: 122px;
+  margin-bottom: 10px;
 }
 
 .pagination__button {
@@ -218,5 +229,5 @@
 .pagination__text {
   margin-bottom: 233px;
   margin-top: 2px;
-  margin-left: 7px;
+  margin-left: 5px;
 }

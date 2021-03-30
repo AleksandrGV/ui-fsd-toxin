@@ -3,14 +3,17 @@ block variables
     -var title = 'UI Kit Toxin';
 
 include ../layout/main-template
+  //- .logo-index
+  //-   a.logo-group
+  //-     img.logo__img(src="../../img/logo_group.svg" alt="Logotype")
 
   include ../includes/header
 
   main.page__main
 
-    //- include ../includes/ui-colors-type
+    include ../includes/ui-colors-type
 
-    //-   hr
+      hr
 
     include ../includes/form-elements
     .container
@@ -38,7 +41,7 @@ include ../layout/main-template
               span.visually-hidden Кнопка нажата
 
     hr
-    .background
+    .cards-background
       .container
         .container-cards
           include ../includes/cards

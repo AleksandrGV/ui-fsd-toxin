@@ -1,0 +1,23 @@
+.subscription {
+  margin-right: 32px;
+}
+
+.subscription-field {
+  position: relative;
+  margin-bottom: 95px;
+}
+
+.subscription__title {
+  @include h4;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+// .subscription__title {
+//   margin-bottom: 18px;
+// }
+
+.subscription__text {
+  line-height: 24px;
+  margin-bottom: 23px;
+}

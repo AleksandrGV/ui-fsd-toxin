@@ -1,16 +1,20 @@
 .calendar {
   width: 320px;
   border: 1px solid $gainsborough;
-  padding: 2px 20px 0;
   box-shadow: 0px 0px 25px 0px $light-telegrey;
   background-color: $white;
   margin: 20px 20px 40px;
+}
+
+.calendar__wrap {
+  padding: 0 20px;
 }
 
 .calendar__table {
   width: 100%;
   line-height: 3;
   border-collapse: collapse;
+  margin-bottom: 4px;
 }
 
 .calendar__header {
@@ -77,7 +81,7 @@
       content: "";
       position: absolute;
       width: 22px;
-      height: 44px;
+      height: 40px;
       top: 0;
       bottom: 0;
       background: linear-gradient(180deg, $purple 0%, $light-blue 100%);
@@ -116,5 +120,8 @@
   &--inactive {
     color: $blue-crayola;
   }
+}
 
+.dropdown-button--calendar {
+  margin: 10px 20px;
 }
