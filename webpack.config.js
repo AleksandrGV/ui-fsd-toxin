@@ -149,6 +149,6 @@ module.exports = {
     filename: 'js/[name].js',
     path: `${PATHS.public}`,
     iife: true,
-    publicPath: '/',
+    // publicPath: '/',
   },
 };
