@@ -82,16 +82,25 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.(jpe?g|png|gif|svg)$/,
-      //   loader: 'file-loader',
-      // },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        exclude: [
+          path.resolve(__dirname, "source/img"),
+        ],
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]',
-        },
+        }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        exclude: [
+          path.resolve(__dirname, "source/fonts")
+        ],
+        loader: 'file-loader',
+        options: {
+          name: 'img/[name].[ext]',
+        }
       },
       {
         test: /\.pug$/,

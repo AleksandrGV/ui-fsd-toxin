@@ -3,41 +3,41 @@
 .cards-wrap
   section.cards.cards--number-selection
     h6.visually-hidden Cards default
-      h2.cards__title Найдём номера под ваши пожелания
-      //- Прибытие
-      .dropdown-date.dropdown-date--cards
-            .dropdown
-              h4.dropdown__title Прибытие
-              ul.dropdown__list
-                li.dropdown__item
-                  a.dropdown__link(href="#") ДД.ММ.ГГГГ
-            .dropdown
-              h4.dropdown__title Выезд
-              ul.dropdown__list
-                li.dropdown__item
-                  a.dropdown__link(href="#") ДД.ММ.ГГГГ
-      //- Dropdown количество гостей
-      .dropdown
-        h4.dropdown__title Гости
-        ul.dropdown__list.dropdown__list--guest
-          li.dropdown__item
-            a.dropdown__link(href="#") Сколько гостей
-            ul.dropdown__list.dropdown__list--sub
-              li.dropdown__item.dropdown__item--sub
-                a.dropdown__link--sub(href="#") Взрослые
-                  span.dropdown__link-span 0
-              li.dropdown__item.dropdown__item--sub
-                a.dropdown__link--sub(href="#") Дети
-                  span.dropdown__link-span 0
-              li.dropdown__item.dropdown__item--sub
-                a.dropdown__link--sub(href="#") Младенцы
-                  span.dropdown__link-span 0
-              li.dropdown-button__item.dropdown-button__item--right
-                a(href="#!").dropdown-button__link Применить
-      .button-big.button-big--card
-        a(href="#!").button.button--wide Подобрать номер
-          svg.button--svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
+    h2.cards__title Найдём номера под ваши пожелания
+    //- Прибытие
+    .dropdown-date.dropdown-date--cards
+          .dropdown
+            h4.dropdown__title Прибытие
+            ul.dropdown__list
+              li.dropdown__item
+                a.dropdown__link(href="#") ДД.ММ.ГГГГ
+          .dropdown
+            h4.dropdown__title Выезд
+            ul.dropdown__list
+              li.dropdown__item
+                a.dropdown__link(href="#") ДД.ММ.ГГГГ
+    //- Dropdown количество гостей
+    .dropdown
+      h4.dropdown__title Гости
+      ul.dropdown__list.dropdown__list--guest
+        li.dropdown__item
+          a.dropdown__link(href="#") Сколько гостей
+          ul.dropdown__list.dropdown__list--sub
+            li.dropdown__item.dropdown__item--sub
+              a.dropdown__link--sub(href="#") Взрослые
+                span.dropdown__link-span 0
+            li.dropdown__item.dropdown__item--sub
+              a.dropdown__link--sub(href="#") Дети
+                span.dropdown__link-span 0
+            li.dropdown__item.dropdown__item--sub
+              a.dropdown__link--sub(href="#") Младенцы
+                span.dropdown__link-span 0
+            li.dropdown-button__item.dropdown-button__item--right
+              a(href="#!").dropdown-button__link Применить
+    .button-big.button-big--card
+      a(href="#!").button.button--wide Подобрать номер
+        svg.button--svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)")
 
   //- Регистрация
   section.cards.cards--sign-up
@@ -68,11 +68,11 @@
         legend.form__legend Данные для входа в сервис
         ul.form__list.form__list--login-details
           li.form__item.form__item--login-details
-            label.form__label.visually-hidden(for='field-email') Поле для ввода email адреса
-            input#field-email.form__input(type='text' name='email' placeholder='Email')
+            label.form__label.visually-hidden(for='field-email-login-details') Поле для ввода email адреса
+            input#field-email-login-details.form__input(type='text' name='email' placeholder='Email')
           li.form__item.form__item--login-details
-            label.form__label.visually-hidden(for='field-password') Поле для ввода пароля
-            input#field-password.form__input(type='password' name='password' placeholder='Пароль')
+            label.form__label.visually-hidden(for='field-password-login-details') Поле для ввода пароля
+            input#field-password-login-details.form__input(type='password' name='password' placeholder='Пароль')
 
         .form__wrap-toggle.form__wrap-toggle--card
           input#input-toggle-1.visually-hidden.form__input--toggle(type='checkbox' name='toggle-checkbox-1')
@@ -152,6 +152,7 @@
 
   //- Вход
   section.cards.cards--input
+    h6.visually-hidden Card input
     form.cards-form(action='#' method='POST' enctype='multipart/form-data' autocomplete='off')
       fieldset.form__fieldset.form__fieldset--input
           legend.form__legend.cards__title.cards__title--input Войти

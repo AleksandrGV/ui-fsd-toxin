@@ -5,7 +5,7 @@ block variables
 include ../layout/main-template
   //- .logo-index
   //-   a.logo-group
-  //-     img.logo__img(src="../../img/logo_group.svg" alt="Logotype")
+  //-     img.logo__img(src="img/logo_group.svg" alt="Logotype")
 
   include ../includes/header
 
@@ -13,42 +13,23 @@ include ../layout/main-template
 
     include ../includes/ui-colors-type
 
-      hr
+    hr
 
-    include ../includes/form-elements
-    .container
-      .wrap
-        .room-details
-          .room-details__comfort
-            h4.title.room-details__title Комфорт
-            p.room-details__text Шумопоглощающие стены
-          .room-details__convenience
-            h4.title.room-details__title Удобство
-            p.room-details__text Окно в каждой из спален
-
-        .comments
-          article.comments__user
-            img.comments__avatar(src="../img/user_avatar.png" alt="Фотография пользователя")
-            h4.title.comments__title Мурад Сарафанов
-            time.comments__time(datetime="13h 05m") 5 дней назад
-            p.comments__text
-              | Великолепный матрас на кровати в
-              | основной спальне! А пуфик вообще потрясающий.
-              | И стены, действительно, шумоподавляющие.
-              | Выкрикивал комплименты повару — никто не
-              | жаловался из соседей
-            button.like__button.like__button--pressed.comments__button-like(type='button') 12
-              span.visually-hidden Кнопка нажата
+    a.link-page(href="form.html") Форма
 
     hr
-    .cards-background
-      .container
-        .container-cards
-          include ../includes/cards
 
-          .cards-wrap
-            include ../includes/calendar
-            include ../includes/slider
+    a.link-page(href="card.html") Карточки
+    //- .cards-background
+    //-   .container
+    //-     .container-cards
+    //-       include ../includes/cards
+
+    //-       .cards-wrap
+    //-         include ../includes/calendar
+    //-         include ../includes/slider
+
+    hr
 
   include ../includes/footer
 

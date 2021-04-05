@@ -1,0 +1,19 @@
+block variables
+    -var description = 'UI Kit Toxin Form';
+    -var title = 'UI Kit Toxin Card';
+
+include ../layout/main-template
+  .logo-index
+    a.logo-group
+      img.logo__img(src="img/logo_group.svg" alt="Logotype")
+
+  a.link-page(href="index.html") На главную
+
+  .cards-background
+      .container
+        .container-cards
+          include ../includes/cards
+
+          .cards-wrap
+            include ../includes/calendar
+            include ../includes/slider
