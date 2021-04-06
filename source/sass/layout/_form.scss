@@ -428,8 +428,15 @@
   background-image: url("../img/star_border.svg");
   background-position: 50%;
   background-repeat: no-repeat;
-
 }
+
+// .form__rating:not(:hover) .form__input-rating:checked + .form__label-rating ~ .form__label-rating:hover {
+//   background-image: url("../img/star_border.svg");
+// }
+
+// .form__input-rating:checked ~ .form__label-rating {
+//   background-image: url("../img/star.svg");
+// }
 
 .form__label-rating:hover ~ .form__label-rating,
 .form__rating:not(:hover) .form__input-rating:invalid + .form__label-rating,
@@ -440,6 +447,8 @@
 }
 
 .form__input-rating + .form__label-rating:hover,
-.form__rating:not(:hover) .form__input-rating:focus + .form__label-rating {
+.form__rating:not(:hover) .form__input-rating:focus + .form__label-rating,
+.form__rating:not(:hover) .form__input-rating:checked + .form__label-rating
+ {
   background-image: url("../img/star.svg");
 }
